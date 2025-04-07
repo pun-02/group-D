@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+header img.s {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 0.3rem;
+  }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #002147; /* Dark blue */
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #FFD700; /* Gold */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 8px;
+}
+
+/* Navbar */
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a i {
+    margin-right: 5px;
+}
+
+/* Navbar Hover Effect */
+.navbar a:hover {
+    color: #FFD700; /* Gold */
+    border-bottom: 2px solid #FFD700;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?restaurant,food') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-blend-mode: darken;
+    background-color: rgba(0, 33, 71, 0.6);
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #FFD700; /* Gold */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    text-decoration: none;
+    background: #FFD700; /* Gold */
+    color: #002147; /* Dark blue */
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: #ffb400;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #002147;
+    color: white;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+footer i {
+    color: #FFD700;
+}
+
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #002147;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.cookie-btn {
+    background: #FFD700;
+    color: #002147;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cookie-btn:hover {
+    background: #ffb400;
+    transform: scale(1.05);
+}
+
+.reject {
+    background: #ff4d4d;
+    color: white;
+}
+
+.reject:hover {
+    background: #cc0000;
+}
+
+/* Hide cookie banner when accepted */
+.hidden {
+    display: none;
+}
+/* Login Button */
+.btn-login {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-login:hover,
+.btn-login:focus {
+    background-color: #81c784; /* Light Green */
+    transform: scale(1.05);
+}
+
+/* Sign In Button */
+.btn-signin {
+    background-color: #fd7e14; /* Orange */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-signin:hover,
+.btn-signin:focus {
+    background-color: #ffcc80; /* Light Orange */
+    transform: scale(1.05);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+/*login css/
+/* Login Page Styling */
+/* Login Page Styles */
+body.login-page {
+    background: linear-gradient(135deg, #f0f4ff, #e0eafc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.login-container h2 {
+    color: #002147;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #002147;
+    box-shadow: 0 0 5px rgba(0, 33, 71, 0.3);
+}
+
+.btn-login {
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-login:hover {
+    background-color: #218838;
+    transform: scale(1.03);
+}
+
+.success-message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+    display: none;
+}
+
+.login-container p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.login-container a {
+    color: #fd7e14;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .navbar a {
+    color: #bbb;
+}
+
+body.dark-mode .hero {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .btn {
+    background-color: #7f1c4c;
+    color: #121212;
+}
+
+body.dark-mode footer {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .cookie-banner {
+    background-color: #333;
+}
+
+body.dark-mode .cookie-btn {
+    background-color: #8f306f;
+    color: #121212;
+}
+
+body.dark-mode .cookie-btn.reject {
+    background-color: #ff4d4d;
+}
+
+body.dark-mode .cookie-btn:hover {
+    background-color: #9a3c7e;
+}
+
+/* Menu Page Styles */
+.menu-categories {
+    padding: 10px;
+    background-color: #f8f9fa;
+  }
+  
+  .menu-category {
+    margin-bottom: 30px;
+  }
+  
+  .menu-category h2 {
+    font-size: 2rem;
+    color: #3889e6;
+    margin-bottom: 15px;
+  }
+  
+  .menu-category ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-category ul li {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .hero {
+    text-align: center;
+    background-color: #337bcd;
+    color: white;
+    padding: 60px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  footer {
+    background-color: #002147;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Go to Top Button Styling */
+.go-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #002147; /* Dark blue */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+  
+  .go-to-top-btn:hover {
+    background-color: #FFD700; /* Gold */
+    transform: scale(1.1);
+  }
+  
+  .go-to-top-btn:focus {
+    outline: none;
+  }
