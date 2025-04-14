@@ -111,3 +111,17 @@ function closebanner(id) {
       banner.style.display = "none";
   }
 }
+
+
+// //////////////// Contact page
+
+        // JavaScript form submission
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+          showSuccessMessage();
+        });
+    
+        function showSuccessMessage() {
+          document.getElementById('success').style.display = 'block';
+          document.getElementById('contactForm').reset();
+        }
