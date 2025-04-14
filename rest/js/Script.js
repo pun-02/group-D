@@ -102,3 +102,12 @@ function scrollToTop() {
     behavior: "smooth"
   });
 }
+
+
+// Close the Cookies by accept and reject
+function closebanner(id) {
+  const banner = document.getElementById(id);
+  if (banner) {
+      banner.style.display = "none";
+  }
+}

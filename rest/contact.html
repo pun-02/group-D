@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Craze - Contact</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+</head>
+
+
+<style>
+ .contact-section {
+    margin-top: 3em;
+    padding: 60px 20px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Contact Form */
+#contactForm {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group span {
+    color: rgb(212, 27, 27);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+input:focus, textarea:focus {
+    border-color: #357fce;
+    outline: none;
+}
+
+button.btn {
+    background-color: #357fce;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button.btn:hover {
+    background-color: #357fce;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-info h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* social links */
+.social-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-links h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* WhatsApp Green */
+.social-icon.whatsapp {
+    background-color: #25D366;
+}
+
+.social-icon.whatsapp:hover {
+    background-color: #1ebe5b;
+}
+
+/* Facebook Blue */
+.social-icon.facebook {
+    background-color: #3b5998;
+}
+
+.social-icon.facebook:hover {
+    background-color: #2d4373;
+}
+
+/* Instagram Gradient-like */
+.social-icon.instagram {
+    background-color: #E1306C;
+}
+
+.social-icon.instagram:hover {
+    background-color: #C13584;
+}
+#success {
+      display: none;
+      color: white;
+      font-size: 16px;
+      margin-top: 10px;
+      background-color: green;
+      text-align: center;
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+</style>
+<body>
+
+    <!-- Header test -->
+    <header>
+        <img src="assets/images/logo.png" alt="" class="s">
+        <a href="#" class="logo"><i class="bi bi-circle-half"></i> Spice Craze</a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="home.html"><i class="bi bi-house-door"></i> Home</a></li>
+                <li><a href="menu.html"><i class="bi bi-card-list"></i> Menu</a></li>
+                <li><a href="#"><i class="bi bi-info-circle"></i> About</a></li>
+                <li><a href="#"><i class="bi bi-telephone"></i> Contact</a></li>
+                 <!-- Added Login and Sign In buttons -->
+                 <li><a href="login.html" class="btn-login"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
+                 <li><a href="sigin.html" class="btn-signin"><i class="bi bi-person-plus"></i> Sign In</a></li>
+                 <!--linking-->
+                
+            </ul>
+        </nav>
+    </header>
+    <!-- Go to Top Button -->
+
+    <button id="goToTopBtn" class="go-to-top-btn" onclick="scrollToTop()">
+    <i class="bi bi-arrow-up-circle"></i> <!-- You can use any icon you prefer -->
+    </button>
+
+    <!-- Hero Section -->
+    <!-- <section class="hero">
+        <h1><i class="bi bi-stars"></i> Welcome to Spice Craze</h1>
+        <p><i class="bi bi-chat-quote"></i> Experience the best flavors from around the world.</p>
+        <a href="menu.html" class="btn"><i class="bi bi-book-half"></i> View Menu</a>
+    </section> -->
+
+
+    <!-- Contact section -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+    
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <form id="contactForm" method="post">
+                <div id="success">Message has sent successfully!</div>
+                <div class="form-group">
+                    <label for="name">Name <span>*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Your full name">
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email <span>*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+                </div>
+    
+                <div class="form-group">
+                    <label for="phone">Phone <span>*</span></label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+442071234567">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message <span>*</span></label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+                </div>
+    
+                <button type="submit" on class="btn">Send Message</button>
+            </form>
+    
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><strong>Phone:</strong> (+44) 20 7123 4567</p>
+                <p><strong>Email:</strong> info@spiceraze.com</p>
+                <p><strong>Address:</strong> 456 Avenue, London</p>
+                <p><strong>Opening Hours:</strong><br>
+                   Mon–Sat: 11am – 10pm<br>
+                   Sunday: 10am - 10pm
+                </p>
+
+                <div class="social-links">
+                    <a href="https://wa.me/+923495139780" target="_blank" class="social-icon whatsapp">WhatsApp</a>
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon facebook">Facebook</a>
+                    <a href="https://https://www.instagram.com/" target="_blank" class="social-icon instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   
+    
+
+    
+       
+  
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Amu <i class="bi bi-heart-fill"></i></p>
+    </footer>
+
+    <!-- Cookie  -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>This website uses cookies to enhance your experience. Do you accept?</p>
+        <button id="accept-cookies" onclick="closebanner('cookie-banner')" class="cookie-btn">Accept</button>
+        <button id="reject-cookies" onclick="closebanner('cookie-banner')" class="cookie-btn reject">Reject</button>
+    </div>
+
+    <script src="js/Script.js"></script>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+          event.preventDefault(); // Prevent form from submitting normally
+          showSuccessMessage();
+        });
+    
+        function showSuccessMessage() {
+          document.getElementById('success').style.display = 'block';
+          document.getElementById('contactForm').reset();
+        }
+      </script>
+
+</body>
+</html>
