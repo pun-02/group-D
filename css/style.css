@@ -479,9 +479,9 @@ footer p {
 /*contact css*/
 /* Contact Section */
 .contact-section {
-    padding: 100px 20px 60px; /* top padding to clear fixed header */
+    padding: 50px 0px 0px 0px;
     background-color: #f0f4ff;
-    min-height: calc(100vh - 120px); /* full screen minus footer */
+   /*min-height: calc(100vh - 120px); /* full screen minus footer */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -578,7 +578,7 @@ footer p {
 
 /* Social Links */
 .social-links {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     gap: 10px;
     margin-top: 15px;
@@ -594,21 +594,64 @@ footer p {
     transition: 0.3s ease;
 }
 
+/* WhatsApp Green */
 .social-icon.whatsapp {
-    background-color: #4b25d3;
+    background-color: #25D366;
 }
 
+.social-icon.whatsapp:hover {
+    background-color: #1ebe5b;
+}
+
+/* Facebook Blue */
 .social-icon.facebook {
-    background-color: #104ccc;
+    background-color: #3b5998;
 }
 
+.social-icon.facebook:hover {
+    background-color: #2d4373;
+}
+
+/* Instagram Gradient-like */
 .social-icon.instagram {
-    background-color: #1d33db;
+    background-color: #E1306C;
 }
 
-.social-icon:hover {
-    opacity: 0.85;
-    transform: scale(1.03);
+.social-icon.instagram:hover {
+    background-color: #C13584;
+}
+
+#success {
+    display: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: green;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+  }
+
+
+  .contact-page footer, .about-page footer {
+    padding: 0rem 1rem 1rem 1rem;
+    
+}
+
+.contact-section button.btn {
+    background-color: #357fce;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.contact-section button.btn:hover {
+    background-color: #357fce;
 }
 
 /* Responsive Design */
@@ -623,7 +666,104 @@ footer p {
     }
 }
 
+/* about-page */
+.about-page header {
+    background-color: #e6c3a5;
+    padding: 2rem;
+    /* text-align: center; */
+    color: white;
+  }
+  .about-page section {
+    padding: 1.5rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+    /* text-align: center; */
+  }
+  
 
+
+  .about-page h2 {
+    margin-bottom: 1rem;
+    /* display: inline-block; */
+    font-size: 2.5rem;
+    color: #002147;
+    font-weight: bold;
+    text-align: center;
+}
+  
+  .about-page .team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .about-page .team-member {
+    flex: 1 1 250px;
+    /* text-align: center; */
+  }
+  .about-page .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .about-page .testimonial {
+    background: #f8f0e3;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-left: 5px solid #e6c3a5;
+    font-style: italic;
+  }
+  
+  .about-page .customer-feedback {
+        background-color: #fff;
+        padding: 60px 20px;
+        /* text-align: center; */
+    }
+    
+    .about-page .customer-feedback h2 {
+        font-size: 2.5em;
+        margin-bottom: 40px;
+        color: #333;
+    }
+    
+    .about-page .feedback-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .about-page .feedback {
+        background-color: #f2f2f2;
+        padding: 25px 20px;
+        border-radius: 10px;
+        max-width: 300px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        font-style: italic;
+    }
+    
+  .about-page .feedback p {
+        font-size: 1em;
+        color: #444;
+    }
+    
+   .about-page .feedback h4 {
+        margin-top: 15px;
+        font-weight: normal;
+        color: #666;
+    }
+  
+  @media (max-width: 600px) {
+   .about-page .team {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* about page end */
 
 
 
